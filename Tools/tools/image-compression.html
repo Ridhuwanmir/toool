@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Compress images online with PixelCraft Studio. Reduce image file size without losing quality. Fast, free, and easy-to-use image compression tool.">
+  <meta name="keywords" content="image compression, compress images, reduce image size, online image tools, free image compressor, Ridhuwan, Ridhuwan mir, image size reducer">
+  <meta name="author" content="Ridhuwan">
+  <meta name="robots" content="index, follow">
+  <title>Image Compression - PixelCraft Studio | Free Online Image Compressor</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Structured Data (Optional) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PixelCraft Studio Image Compression",
+      "description": "Compress images online with PixelCraft Studio. Reduce image file size without losing quality.",
+      "applicationCategory": "Utility",
+      "operatingSystem": "Web",
+      "url": "https://www.yourwebsite.com",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  </script>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      height: 50px;
+      vertical-align: middle;
+    }
+
+    .branding {
+      display: inline-block;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .website-name {
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+
+    .powered-by {
+      font-size: 0.9em;
+      color: #e0e0e0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      color: #444;
+    }
+
+    .tool-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .file-input-container {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .custom-file-input {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .custom-file-input:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .option-container {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .option-container label {
+      font-weight: 500;
+      margin-right: 10px;
+    }
+
+    .option-container select {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .primary-btn {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 20px auto;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    #loading {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 500;
+      color: #667eea;
+    }
+
+    #progress {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: 500;
+      color: #667eea;
+    }
+
+    .preview-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #preview-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #download-link {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  </style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_UNIT_ID" crossorigin="anonymous"></script>
+  <!-- Browser Image Compression Library -->
+  <script src="https://cdn.jsdelivr.net/npm/browser-image-compression/dist/browser-image-compression.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/image/r1.png" alt="PixelCraft Studio Logo">
+      <div class="branding">
+        <div class="website-name">PixelCraft Studio</div>
+        <div class="powered-by">Powered by Ridhuwan</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="image-compression.html">Image Compression</a></li>
+        <li><a href="image-backgroundremover.html">Remove Background</a></li>
+        <li><a href="image-enhancer.html">Image Enhancer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Image Compression</h1>
+    <div class="tool-container">
+      <!-- File Upload -->
+      <div class="file-input-container">
+        <input type="file" id="image-input" accept="image/*" style="display: none;">
+        <label for="image-input" class="custom-file-input">Upload Image</label>
+      </div>
+
+      <!-- Compression Level -->
+      <div class="option-container">
+        <label for="compression-level">Compression Level:</label>
+        <select id="compression-level">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <!-- Process Button -->
+      <button id="compress-button" class="primary-btn">Compress Image</button>
+
+      <!-- Loading Indicator -->
+      <div id="loading" style="display: none;">Compressing image, please wait...</div>
+
+      <!-- Progress Percentage -->
+      <div id="progress" style="display: none;">0%</div>
+
+      <!-- Preview -->
+      <div class="preview-container">
+        <img id="preview-image" src="#" alt="Preview" style="display: none;">
+      </div>
+
+      <!-- Download Button -->
+      <a id="download-link" style="display: none;">
+        <button class="primary-btn">Download Compressed Image</button>
+      </a>
+    </div>
+
+    <!-- Ad Slot -->
+    <div class="ad-slot">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_UNIT_ID" crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-YOUR_AD_UNIT_ID"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 PixelCraft Studio. All rights reserved. Powered by Ridhuwan.</p>
+  </footer>
+
+  <script>
+    // Image Compression Tool Functionality
+    document.getElementById('image-input').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      const previewImage = document.getElementById('preview-image');
+      const downloadLink = document.getElementById('download-link');
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          previewImage.src = e.target.result;
+          previewImage.style.display = 'block';
+          downloadLink.style.display = 'none'; // Hide download link until processing is done
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    document.getElementById('compress-button').addEventListener('click', async function () {
+      const compressionLevel = document.getElementById('compression-level').value;
+      const fileInput = document.getElementById('image-input');
+      const previewImage = document.getElementById('preview-image');
+      const downloadLink = document.getElementById('download-link');
+      const loading = document.getElementById('loading');
+      const progress = document.getElementById('progress');
+
+      if (!fileInput.files || fileInput.files.length === 0) {
+        alert('Please upload an image first.');
+        return;
+      }
+
+      const file = fileInput.files[0];
+
+      // Show loading indicator and progress
+      loading.style.display = 'block';
+      progress.style.display = 'block';
+
+      // Map compression level to options
+      let options;
+      switch (compressionLevel) {
+        case 'low':
+          options = { maxSizeMB: 1, maxWidthOrHeight: 1024, useWebWorker: true };
+          break;
+        case 'medium':
+          options = { maxSizeMB: 0.5, maxWidthOrHeight: 800, useWebWorker: true };
+          break;
+        case 'high':
+          options = { maxSizeMB: 0.1, maxWidthOrHeight: 640, useWebWorker: true };
+          break;
+        default:
+          options = { maxSizeMB: 0.5, maxWidthOrHeight: 800, useWebWorker: true };
+      }
+
+      try {
+        // Compress the image
+        const compressedFile = await imageCompression(file, options);
+
+        // Update the preview image
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          previewImage.src = e.target.result;
+          previewImage.style.display = 'block';
+        };
+        reader.readAsDataURL(compressedFile);
+
+        // Update the download link
+        downloadLink.href = URL.createObjectURL(compressedFile);
+        downloadLink.download = `compressed-${file.name}`;
+        downloadLink.style.display = 'block';
+      } catch (error) {
+        console.error('Error compressing image:', error);
+        alert('Failed to compress image. Please try again.');
+      } finally {
+        // Hide loading indicator and progress
+        loading.style.display = 'none';
+        progress.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

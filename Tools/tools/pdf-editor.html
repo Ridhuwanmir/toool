@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Edit your PDF files online with PixelCraft Studio's free PDF Editor. Upload, edit, and download PDFs easily. Powered by Ridhuwan.">
+  <meta name="keywords" content="PDF editor, edit PDF online, free PDF editor, PDF tools, PixelCraft Studio, Ridhuwan">
+  <meta name="author" content="Ridhuwan">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.yourwebsite.com/pdf-editor.html">
+  
+  <!-- Open Graph Tags for Social Sharing -->
+  <meta property="og:title" content="PDF Editor - PixelCraft Studio">
+  <meta property="og:description" content="Edit your PDF files online with PixelCraft Studio's free PDF Editor. Upload, edit, and download PDFs easily.">
+  <meta property="og:image" content="https://www.yourwebsite.com/assets/og-image.jpg">
+  <meta property="og:url" content="https://www.yourwebsite.com/pdf-editor.html">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_UNIT_ID" crossorigin="anonymous"></script>
+  
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      height: 50px;
+      vertical-align: middle;
+    }
+
+    .branding {
+      display: inline-block;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .website-name {
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+
+    .powered-by {
+      font-size: 0.9em;
+      color: #e0e0e0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      color: #444;
+    }
+
+    .tool-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .file-input-container {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .custom-file-input {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .custom-file-input:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .primary-btn {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 20px auto;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .preview-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #pdf-preview {
+      width: 100%;
+      height: 500px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    #download-link {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  </style>
+  <title>PDF Editor - PixelCraft Studio</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/image/r1.png" alt="PixelCraft Studio Logo">
+      <div class="branding">
+        <div class="website-name">PixelCraft Studio</div>
+        <div class="powered-by">Powered by Ridhuwan</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li> <!-- Homepage link -->
+        <li><a href="pdf-editor.html">PDF Editor</a></li>
+        <li><a href="image-backgroundremover.html">Remove Background</a></li>
+        <li><a href="image-enhancer.html">Image Enhancer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>PDF Editor</h1>
+    <div class="tool-container">
+      <!-- File Upload -->
+      <div class="file-input-container">
+        <input type="file" id="pdf-input" accept="application/pdf" style="display: none;">
+        <label for="pdf-input" class="custom-file-input">Upload PDF</label>
+      </div>
+
+      <!-- Edit Button -->
+      <button id="edit-pdf-button" class="primary-btn">Edit PDF</button>
+
+      <!-- Preview -->
+      <div class="preview-container">
+        <iframe id="pdf-preview" src="#" alt="Preview"></iframe>
+      </div>
+
+      <!-- Download Button -->
+      <a id="download-link" style="display: none;">
+        <button class="primary-btn">Download Edited PDF</button>
+      </a>
+    </div>
+
+    <!-- Google AdSense Ad Slot -->
+    <div class="ad-slot" style="margin: 20px auto; text-align: center;">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_UNIT_ID" crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-YOUR_AD_UNIT_ID"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 PixelCraft Studio. All rights reserved. Powered by Ridhuwan.</p>
+  </footer>
+
+  <script>
+    document.getElementById('pdf-input').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      const pdfPreview = document.getElementById('pdf-preview');
+      const downloadLink = document.getElementById('download-link');
+
+      if (file) {
+        const fileURL = URL.createObjectURL(file);
+        pdfPreview.src = fileURL;
+        pdfPreview.style.display = 'block';
+
+        // Set download link
+        downloadLink.href = fileURL;
+        downloadLink.download = file.name;
+        downloadLink.style.display = 'block';
+      }
+    });
+
+    document.getElementById('edit-pdf-button').addEventListener('click', function () {
+      // Redirect to Sejda's PDF Editor
+      window.open('https://www.sejda.com/pdf-editor', '_blank');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Enhance your images online with PixelCraft Studio's AI-powered image enhancer. Improve image quality, sharpness, and resolution for free. Powered by Ridhuwan.">
+  <meta name="keywords" content="image enhancer, improve image quality, online image editor, AI image enhancer, Ridhuwan, Ridhuwan mir, free image enhancer">
+  <meta name="author" content="Ridhuwan">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.yourwebsite.com/image-enhancer.html">
+  
+  <!-- Open Graph Tags for Social Sharing -->
+  <meta property="og:title" content="PixelCraft Studio - AI Image Enhancer">
+  <meta property="og:description" content="Enhance your images online with PixelCraft Studio's AI-powered image enhancer. Improve image quality, sharpness, and resolution for free.">
+  <meta property="og:image" content="https://www.yourwebsite.com/assets/og-image.jpg">
+  <meta property="og:url" content="https://www.yourwebsite.com/image-enhancer.html">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_UNIT_ID" crossorigin="anonymous"></script>
+  
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      height: 30px;
+      vertical-align: middle;
+    }
+
+    .branding {
+      display: inline-block;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .website-name {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    .powered-by {
+      font-size: 0.8em;
+      color: #e0e0e0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      color: #444;
+    }
+
+    .tool-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .file-input-container {
+      margin-bottom: 20px;
+      text-align: center;
+      border: 2px dashed #667eea;
+      padding: 40px;
+      border-radius: 10px;
+      background: #f9f9f9;
+      transition: background 0.3s ease;
+    }
+
+    .file-input-container:hover {
+      background: #f0f0f0;
+    }
+
+    .custom-file-input {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .custom-file-input:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .primary-btn {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 20px auto;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .preview-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #preview-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    #error-message {
+      display: none;
+      color: #721c24;
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .filters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+      gap: 10px;
+      padding: 15px 0;
+    }
+
+    .filter-item {
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .filter-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .filter-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      object-fit: cover;
+      margin-bottom: 5px;
+      border: 2px solid transparent;
+    }
+
+    .filter-item.active img {
+      border-color: #667eea;
+    }
+
+    .filter-item span {
+      font-size: 11px;
+      color: #666;
+      display: block;
+    }
+
+    /* Filter Effects */
+    #preview-image.original {
+      filter: none; /* No filter */
+    }
+
+    #preview-image.enhance {
+      filter: contrast(1.2) brightness(1.1);
+    }
+
+    #preview-image.portrait {
+      filter: sepia(0.5) contrast(1.2);
+    }
+
+    #preview-image.vintage {
+      filter: sepia(0.8) contrast(1.1) brightness(0.9);
+    }
+
+    #preview-image.smooth {
+      filter: blur(1px) brightness(1.1);
+    }
+
+    #preview-image.sharp {
+      filter: contrast(1.5) brightness(1.1);
+    }
+
+    #preview-image.vivid {
+      filter: saturate(2) contrast(1.2);
+    }
+  </style>
+  <title>Image Enhancer - PixelCraft Studio</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="../image/r1.png" alt="PixelCraft Studio Logo">
+      <div class="branding">
+        <div class="website-name">PixelCraft Studio</div>
+        <div class="powered-by">Powered by Ridhuwan</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li> <!-- Homepage link -->
+        <li><a href="image-compression.html">Image Compression</a></li>
+        <li><a href="image-backgroundremover.html">Remove Background</a></li>
+        <li><a href="image-enhancer.html">Image Enhancer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Image Enhancer</h1>
+    <div class="tool-container">
+      <div class="preview-section">
+        <div class="preview-container">
+          <img id="preview-image" src="assets/placeholder-image.png" alt="Preview">
+        </div>
+
+        <!-- Filters Grid -->
+        <div class="filters-grid">
+          <div class="filter-item active" data-filter="original">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23667eea' d='M21 3H3C2 3 1 4 1 5v14c0 1.1.9 2 2 2h18c1 0 2-1 2-2V5c0-1-1-2-2-2zM5 17l3.5-4.5 2.5 3.01L14.5 11l4.5 6H5z'/%3E%3C/svg%3E" alt="Original">
+            <span>Original</span>
+          </div>
+          <div class="filter-item" data-filter="enhance">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23667eea' d='M12 3v9.28c-.47-.17-.97-.28-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H21V3H12zM19 19h-2v-2h2v2z'/%3E%3C/svg%3E" alt="Enhanced">
+            <span>Enhanced</span>
+          </div>
+          <div class="filter-item" data-filter="portrait">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23667eea' d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Portrait">
+            <span>Portrait</span>
+          </div>
+          <div class="filter-item" data-filter="vintage">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23667eea' d='M18 13v7H4V6h5.02c.05-.71.22-1.38.48-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2zm-1.5 5h-11l2.75-3.53 1.96 2.36 2.75-3.54L16.5 18zm2.8-9.11c.44-.7.7-1.51.7-2.39C20 4.01 17.99 2 15.5 2S11 4.01 11 6.5s2.01 4.5 4.49 4.5c.88 0 1.7-.26 2.39-.7L21 13.42 22.42 12 19.3 8.89zM15.5 9C14.12 9 13 7.88 13 6.5S14.12 4 15.5 4 18 5.12 18 6.5 16.88 9 15.5 9z'/%3E%3C/svg%3E" alt="Vintage">
+            <span>Vintage</span>
+          </div>
+          <div class="filter-item" data-filter="smooth">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23667eea' d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E" alt="Smooth">
+            <span>Smooth</span>
+          </div>
+          <div class="filter-item" data-filter="sharp">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23667eea' d='M7 21h2v-2H7v2zM3 5h2V3H3v2zm4 0h2V3H7v2zm0 8h2v-2H7v2zm-4 8h2v-2H3v2zm8 0h2v-2h-2v2zm-8-8h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm8 8h2v-2h-2v2zm4-4h2v-2h-2v2zm4-10v18h2V3h-2zm-4 18h2v-2h-2v2zm0-16h2V3h-2v2zm-4 8h2v-2h-2v2zm0-8h2V3h-2v2zm0 4h2V7h-2v2z'/%3E%3C/svg%3E" alt="Sharp">
+            <span>Sharp</span>
+          </div>
+          <div class="filter-item" data-filter="vivid">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23667eea' d='M12 3v9.28c-.47-.17-.97-.28-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H21V3H12zM19 19h-2v-2h2v2z'/%3E%3C/svg%3E" alt="Vivid">
+            <span>Vivid</span>
+          </div>
+        </div>
+
+        <div class="file-input-container">
+          <input type="file" id="image-input" accept="image/jpeg,image/png,image/webp" style="display: none;">
+          <label for="image-input" class="custom-file-input">Upload Image</label>
+          <p class="file-types">Supports: JPEG, PNG, WEBP (Max 5MB)</p>
+        </div>
+      </div>
+
+      <button id="enhance-button" class="primary-btn">Download Enhanced Image</button>
+      <button id="remini-button" class="primary-btn">Enhance More</button>
+      <div id="error-message"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 PixelCraft Studio. All rights reserved. Powered by Ridhuwan.</p>
+  </footer>
+
+  <script>
+    // Handle file input and display the uploaded image
+    document.getElementById('image-input').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      const previewImage = document.getElementById('preview-image');
+      const errorMessage = document.getElementById('error-message');
+
+      if (file && file.type.startsWith('image/')) {
+        const fileURL = URL.createObjectURL(file);
+        previewImage.src = fileURL;
+        previewImage.style.display = 'block';
+        errorMessage.style.display = 'none';
+      } else {
+        errorMessage.textContent = 'Please upload a valid image file (JPEG, PNG, WEBP).';
+        errorMessage.style.display = 'block';
+        previewImage.style.display = 'none';
+      }
+    });
+
+    // Handle filter buttons
+    document.querySelectorAll('.filter-item').forEach((filter) => {
+      filter.addEventListener('click', function () {
+        // Remove active class from all filters
+        document.querySelectorAll('.filter-item').forEach((f) => f.classList.remove('active'));
+        
+        // Add active class to the clicked filter
+        this.classList.add('active');
+
+        // Get the selected filter type
+        const filterType = this.getAttribute('data-filter');
+
+        // Apply the filter to the preview image
+        const previewImage = document.getElementById('preview-image');
+        previewImage.className = ''; // Reset all classes
+        previewImage.classList.add(filterType); // Add the selected filter class
+      });
+    });
+
+    // Redirect to Remini's website
+    document.getElementById('remini-button').addEventListener('click', function () {
+      window.open('https://www.remini.ai/', '_blank');
+    });
+  </script>
+</body>
+</html>

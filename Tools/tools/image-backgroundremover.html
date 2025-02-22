@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Remove backgrounds from images online with PixelCraft Studio. Fast, free, and easy-to-use background remover tool. Powered by Ridhuwan.">
+  <meta name="keywords" content="remove background, background remover, online image tools, free background remover, Ridhuwan, Ridhuwan mir, remove image background">
+  <meta name="author" content="Ridhuwan">
+  <meta name="robots" content="index, follow">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.yourwebsite.com/image-backgroundremover.html">
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PixelCraft Studio Background Remover",
+      "description": "Remove backgrounds from images online with PixelCraft Studio. Fast, free, and easy-to-use background remover tool.",
+      "applicationCategory": "Utility",
+      "operatingSystem": "Web",
+      "url": "https://www.yourwebsite.com/image-backgroundremover.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  </script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      height: 50px;
+      vertical-align: middle;
+    }
+
+    .branding {
+      display: inline-block;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .website-name {
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+
+    .powered-by {
+      font-size: 0.9em;
+      color: #e0e0e0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      color: #444;
+    }
+
+    .tool-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .file-input-container {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .custom-file-input {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .custom-file-input:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .primary-btn {
+      display: block;
+      width: 100%;
+      max-width: 200px;
+      margin: 20px auto;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    #loading {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 500;
+      color: #667eea;
+    }
+
+    .preview-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #preview-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #download-link {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  </style>
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_UNIT_ID" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/image/r1.png" alt="PixelCraft Studio Logo - Online Background Remover Tool">
+      <div class="branding">
+        <div class="website-name">PixelCraft Studio</div>
+        <div class="powered-by">Powered by Ridhuwan</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li> <!-- Fixed Home link -->
+        <li><a href="image-compression.html">Image Compression</a></li>
+        <li><a href="image-backgroundremover.html">Remove Background</a></li>
+        <li><a href="image-enhancer.html">Image Enhancer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Remove Background from Images</h1>
+    <div class="tool-container">
+      <!-- File Upload -->
+      <div class="file-input-container">
+        <input type="file" id="image-input" accept="image/*" style="display: none;">
+        <label for="image-input" class="custom-file-input">Upload Image</label>
+      </div>
+
+      <!-- Process Button -->
+      <button id="remove-background-button" class="primary-btn">Remove Background</button>
+
+      <!-- Loading Indicator -->
+      <div id="loading" style="display: none;">Removing background, please wait...</div>
+
+      <!-- Preview -->
+      <div class="preview-container">
+        <img id="preview-image" src="#" alt="Preview of Background Removed Image" style="display: none;">
+      </div>
+
+      <!-- Download Button -->
+      <a id="download-link" style="display: none;">
+        <button class="primary-btn">Download Background Removed Image</button>
+      </a>
+    </div>
+
+    <!-- Content for SEO -->
+    <section class="seo-content">
+      <h2>How to Remove Background from Images</h2>
+      <p>
+        Use PixelCraft Studio's free online background remover tool to easily remove backgrounds from your images.
+        Simply upload your image, click "Remove Background," and download the result. Our tool is fast, accurate,
+        and works with all image formats.
+      </p>
+      <h3>Why Use PixelCraft Studio?</h3>
+      <ul>
+        <li>100% free and easy to use.</li>
+        <li>No software installation required.</li>
+        <li>Supports JPEG, PNG, and other popular formats.</li>
+        <li>Powered by advanced AI technology.</li>
+      </ul>
+    </section>
+
+    <!-- Ad Slot -->
+    <div class="ad-slot">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_UNIT_ID" crossorigin="anonymous"></script>
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-YOUR_AD_UNIT_ID"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 PixelCraft Studio. All rights reserved. Powered by Ridhuwan.</p>
+  </footer>
+
+  <script>
+    // Background Remover Tool Functionality
+    const removeBgApiKey = 'RVTqLbY5AmYeif9ib224XT35'; // Replace with your Remove.bg API key
+
+    document.getElementById('image-input').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      const previewImage = document.getElementById('preview-image');
+      const downloadLink = document.getElementById('download-link');
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          previewImage.src = e.target.result;
+          previewImage.style.display = 'block';
+          downloadLink.style.display = 'none'; // Hide download link until processing is done
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    document.getElementById('remove-background-button').addEventListener('click', async function () {
+      const previewImage = document.getElementById('preview-image');
+      const downloadLink = document.getElementById('download-link');
+      const loading = document.getElementById('loading');
+
+      if (!previewImage.src || previewImage.src === '#') {
+        alert('Please upload an image first.');
+        return;
+      }
+
+      // Show loading indicator
+      loading.style.display = 'block';
+
+      // Convert image to Blob
+      const response = await fetch(previewImage.src);
+      const blob = await response.blob();
+
+      // Send image to Remove.bg API
+      const formData = new FormData();
+      formData.append('image_file', blob);
+
+      try {
+        const apiResponse = await fetch('https://api.remove.bg/v1.0/removebg', {
+          method: 'POST',
+          headers: {
+            'X-Api-Key': removeBgApiKey,
+          },
+          body: formData,
+        });
+
+        if (!apiResponse.ok) {
+          throw new Error(`API Error: ${apiResponse.status} - ${apiResponse.statusText}`);
+        }
+
+        const resultBlob = await apiResponse.blob();
+        const resultUrl = URL.createObjectURL(resultBlob);
+
+        // Show result and download link
+        previewImage.src = resultUrl;
+        downloadLink.href = resultUrl;
+        downloadLink.download = 'background-removed.png';
+        downloadLink.style.display = 'block';
+      } catch (error) {
+        alert('Error removing background. Please try again.');
+        console.error('Error:', error);
+      } finally {
+        loading.style.display = 'none'; // Hide loading indicator
+      }
+    });
+  </script>
+</body>
+</html>
